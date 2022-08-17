@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @layer base {
+  html {
+    font-family: -apple-system, "Roboto", BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+
+  body {
+    margin-bottom: 0;
+  }
+}
+
+@layer components {
+  .avatar {
+    @apply w-[40px] h-[40px] rounded-full object-cover
+  }
+}
+
+@layer utilities {
+  .menu li {
+    position: relative;
+  }
+
+  .menu li:hover::before {
+    position: absolute;
+    content: "";
+    width: 4px;
+    height: 24px;
+    background: #198754;
+    border-left: 4px solid red;
+    top: 0;
+    left: 0;
+  }
+} */
