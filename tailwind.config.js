@@ -7,19 +7,31 @@ module.exports = {
   ],
   theme: {
     container: {
-      center: true,    // 水平置中
-      padding: '12px', // 水平間距
+      center: true,    // -水平置中
+      padding: '12px', // -水平間距
     },
     screens: {
+      // - 此次修改數值
       sm: '768px',
       md: '992px',
       lg: '1440px',
+
+      // - 原本數值
+      // sm: '640px',
+      // md: '768px',
+      // lg: '1024px',
+      // xl: '1280px',
+      // '2xl': '1536px'
+
+      // -其他參考數值
       // sm: '540px',
       // md: '720px',
       // lg: '960px',
       // xl: '1140px',
       // '2xl': '1320px'
+      
     },
+    // -font-size 其他參考數值 直接覆蓋寫法
     // fontSize: {
     //   sm: ['14px', '21px'],
     //   base: ['16px', '24px'],
@@ -69,7 +81,7 @@ module.exports = {
         },
       },
       listStyleType: {
-        square: 'square' // list 樣式
+        square: 'square' // -list 樣式
       },
       fontSize: {
         // '3xxl': ['32px', '48px'],

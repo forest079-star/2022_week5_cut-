@@ -3,6 +3,18 @@
 @tailwind utilities;
 
 /* @layer base {
+  擴充專案的全站樣式
+} */
+
+/* @layer components {
+  自組元件
+} */
+
+/* @layer utilities {
+  自組樣式
+} */
+
+@layer base {
   html {
     font-family: -apple-system, "Roboto", BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", Roboto, "Helvetica Neue", Arial, sans-serif;
   }
@@ -15,6 +27,64 @@
 @layer components {
   .avatar {
     @apply w-[40px] h-[40px] rounded-full object-cover
+  }
+
+  .btn {
+    font-size: 20px;
+    /* @apply inline-block py-1.5 px-3 uppercase font-medium; */
+    @apply inline-block py-2 px-8 text-lg duration-300;
+  }
+
+  . .btn:focus {
+    @apply outline-none;
+  }
+
+  .btn-primary {
+    @apply text-white bg-gradient-to-r from-primary to-secondary;
+  }
+
+  @screen lg {
+    .btn-primary:hover {
+      /* @apply bg-gradient-to-l bg-[center_left_124px] ; */
+      @apply bg-gradient-to-l;
+    }
+  }
+
+  .btn-sm {
+    /* font-size: 16px; */
+    @apply text-base py-1 px-4;
+  }
+
+  .btn-lg {
+    /* font-size: 24px; */
+    @apply text-2xl py-4 px-10;
+  }
+
+  .btn-outline-light {
+    @apply text-white ring-1 ring-white;
+  }
+
+  .btn-outline-light:hover {
+    @apply text-black bg-white;
+  }
+
+
+  .navbar {
+    @apply max-h-0;
+  }
+
+  .navbar.active {
+    @apply max-h-[122px];
+  }
+
+  @screen md {
+    .navbar {
+      @apply max-h-full;
+    }
+
+    .navbar.active {
+      @apply max-h-full;
+    }
   }
 }
 
@@ -33,4 +103,15 @@
     top: 0;
     left: 0;
   }
-} */
+
+  /* -參考工具 */
+  /* title 下底線 */
+  .title-underline {
+    @apply relative after: absolute after:left-0 after:bottom-0 after:w-[50px] after:h-[3px] after:bg-primary;
+  }
+
+  /* 漸層色 */
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-b from-secondary to-primary;
+  }
+}
