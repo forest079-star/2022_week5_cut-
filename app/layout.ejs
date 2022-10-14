@@ -7,32 +7,76 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
   <!-- 分頁icon -->
-  <link rel="shortcut icon" href="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week6-202207/logo2.svg" type="image/x-icon">
-  
+  <link rel="shortcut icon"
+        href="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week6-202207/logo2.svg"
+        type="image/x-icon">
+
   <!-- OG預覽 -->
   <meta property="og:title" content="全台最豐富的程式家教">
   <meta property="og:description" content="學習標準化的電腦形式語言 培養運算思維和邏輯素養">
-  <meta property="og:image" content="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week6-202207/article03.jpg">
+  <meta property="og:image"
+        content="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week6-202207/article03.jpg">
 
-  <title><%- title %></title>
+  <title>
+    <%- title %>
+  </title>
+
   <!-- 字體＆icons -->
-
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@400;700&family=Noto+Sans+TC:wght@400;700&display=swap"
+        rel="stylesheet">
+  <!-- material symbols icons -->
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <!-- CSS -->
   <link rel="stylesheet" href="./assets/style/all.css">
 </head>
 
 <body>
-  <header class="header">
-    這是 header
+  <header class="z-10 bg-dark-100 fixed right-0 left-0">
+    <div class="container">
+      <div class="py-6 flex items-center justify-between">
+        <h1>
+          <a class="h-6 w-6 indent-[101%] whitespace-nowrap overflow-hidden md:h-[42px] md:w-[175px] bg-[url('../images/logo2.svg')] md:bg-[url('../images/logo.svg')] bg-no-repeat bg-contain bg-center"
+             href="./index.html">Coding Home</a>
+        </h1>
+        <!-- ~menu btn -->
+        <button class="block md:hidden text-primary h-6" type="button">
+          <span class="material-symbols-outlined">
+            menu
+          </span>
+        </button>
+        <nav class="absolute left-0 z-10 top-[4.5rem] w-full">
+          <ul class="bg-dark-100 text-white flex items-center flex-col w-full">
+            <li class="pt-6 pb-4">
+              <a class="" href="#">首頁</a>
+            </li>
+            <li class="pt-6 pb-4">
+              <a class="" href="#">課程介紹</a>
+            </li>
+            <li class="pt-6 pb-4">
+              <a class="flex items-center justify-center gap-1.5" href="#">
+                <span class="material-symbols-outlined">
+                  account_circle
+                </span>
+                登入
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
   </header>
 
   <%- contents %>
 
-  <footer class="footer">
-    footer
-  </footer>
-  <script src="./assets/js/vendors.js"></script>
-  <script src="./assets/js/all.js"></script>
+    <!-- <footer class="footer">
+      footer
+    </footer> -->
+    <script src="./assets/js/vendors.js"></script>
+    <script src="./assets/js/all.js"></script>
 </body>
 
 </html>
